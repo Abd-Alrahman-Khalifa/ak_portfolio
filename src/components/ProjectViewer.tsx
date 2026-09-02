@@ -4,11 +4,14 @@ import { X, ExternalLink, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react
 import type { Project } from '../data/projects'
 import ImageFallback from './ImageFallback'
 import GithubIcon from './GithubIcon'
+import { useScrollLock } from '../hooks/useScrollLock'
 
 export default function ProjectViewer({ project, onClose }: { project: Project | null; onClose: () => void }) {
   const [index, setIndex] = useState(0)
   const [zoomed, setZoomed] = useState(false)
   const images = project?.images ?? []
+
+  useScrollLock(Boolean(project))
 
   useEffect(() => {
     if (project) {
@@ -48,7 +51,7 @@ export default function ProjectViewer({ project, onClose }: { project: Project |
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.96, y: 20 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border"
+            className="w-full max-w-3xl max-h-[90vh] overflow-y-auto overscroll-contain rounded-2xl border"
             style={{ borderColor: 'var(--border)', background: 'var(--bg-elevated)' }}
           >
             {/* Gallery */}

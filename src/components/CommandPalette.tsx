@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { navItems, scrollToSection } from '../data/nav'
 import { profile } from '../data/profile'
+import { useScrollLock } from '../hooks/useScrollLock'
 
 interface CommandPaletteProps {
   open: boolean
@@ -17,6 +18,8 @@ interface Command {
 export default function CommandPalette({ open, onClose }: CommandPaletteProps) {
   const [query, setQuery] = useState('')
   const easterEgg = query.trim().toLowerCase() === 'sudo hire abd-alrahman'
+
+  useScrollLock(open)
 
   useEffect(() => {
     if (!open) {
@@ -75,7 +78,7 @@ export default function CommandPalette({ open, onClose }: CommandPaletteProps) {
               className="w-full bg-transparent px-5 py-4 font-mono text-sm outline-none border-b"
               style={{ borderColor: 'var(--border)', color: 'var(--text-primary)' }}
             />
-            <div className="max-h-72 overflow-y-auto p-2">
+            <div className="max-h-72 overflow-y-auto overscroll-contain p-2">
               {easterEgg ? (
                 <div className="px-3 py-6 text-center font-mono">
                   <div style={{ color: 'var(--accent)' }}>PERMISSION GRANTED.</div>

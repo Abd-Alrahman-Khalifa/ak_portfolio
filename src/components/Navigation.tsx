@@ -4,6 +4,7 @@ import { Menu, X, Moon, Sun } from 'lucide-react'
 import { navItems, scrollToSection } from '../data/nav'
 import { profile } from '../data/profile'
 import Magnetic from './Magnetic'
+import { useScrollLock } from '../hooks/useScrollLock'
 
 interface NavigationProps {
   theme: 'dark' | 'light'
@@ -15,6 +16,7 @@ export default function Navigation({ theme, onToggleTheme, onOpenPalette }: Navi
   const [hidden, setHidden] = useState(false)
   const [shrunk, setShrunk] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  useScrollLock(mobileOpen)
   const [active, setActive] = useState('hero')
 
   useEffect(() => {
