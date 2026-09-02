@@ -59,7 +59,7 @@ All portfolio content lives in `src/data/` — no need to touch components to up
 - `projects.ts` — project list, links, features, categories
 - `stack.ts` — technology constellation + engineering pipeline + DB schema
 - `experience.ts` — timeline + education
-- `socials.ts` — social links
+- `socials.ts` — social links + this portfolio's own GitHub/live links (`portfolioMeta` — update after you deploy, see below)
 - `nav.ts` — navigation items + keyboard shortcuts
 
 ## Publishing to GitHub + live deploy
