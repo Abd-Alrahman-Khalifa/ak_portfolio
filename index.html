@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>AbdAlrahman Khalifa — Full-Stack Web Developer</title>
+    <meta
+      name="description"
+      content="AbdAlrahman Khalifa is a backend-focused Laravel / PHP developer with strong frontend engineering skills, based in Al Sharqia, Egypt. Explore projects, stack, and case studies."
+    />
+    <meta name="author" content="AbdAlrahman Khalifa" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://abdalrahmankhalifa.dev/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AbdAlrahman Khalifa — Full-Stack Web Developer" />
+    <meta
+      property="og:description"
+      content="Backend-focused Laravel / PHP developer with strong frontend engineering skills. Explore projects, stack, and case studies."
+    />
+    <meta property="og:image" content="/assets/profile.jpg" />
+    <meta property="og:url" content="https://abdalrahmankhalifa.dev/" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AbdAlrahman Khalifa — Full-Stack Web Developer" />
+    <meta
+      name="twitter:description"
+      content="Backend-focused Laravel / PHP developer with strong frontend engineering skills."
+    />
+    <meta name="twitter:image" content="/assets/profile.jpg" />
+
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "AbdAlrahman Khalifa",
+        "jobTitle": "Full-Stack Web Developer",
+        "url": "https://abdalrahmankhalifa.dev/",
+        "email": "abdelrahman09.k@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Al Sharqia",
+          "addressCountry": "EG"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Delta Technological University"
+        },
+        "sameAs": [
+          "https://github.com/Abd-Alrahman-Khalifa",
+          "https://www.linkedin.com/in/abdelrahman-khalifa-8a9203305",
+          "https://www.instagram.com/abdalrahmankhalifa29/",
+          "https://www.tiktok.com/@abd_alrahmankhalifa29/"
+        ]
+      }
+    </script>
+
+    <!-- Prevent theme flash: set data-theme before first paint -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('ak-theme')
+          var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
+          document.documentElement.setAttribute('data-theme', theme)
+        } catch (e) {}
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
