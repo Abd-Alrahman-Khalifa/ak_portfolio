@@ -2,18 +2,14 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { pipeline } from '../data/stack'
 import Reveal from '../components/Reveal'
+import SectionHeading from '../components/SectionHeading'
 
 export default function EngineeringMindset() {
   const [expanded, setExpanded] = useState<number | null>(null)
 
   return (
     <section id="mindset" className="relative container-px py-32">
-      <Reveal>
-        <span className="font-mono text-xs tracking-widest" style={{ color: 'var(--accent)' }}>
-          02 / PROCESS
-        </span>
-        <h2 className="mt-4 font-display font-medium text-[clamp(1.8rem,4vw,3rem)]">HOW I BUILD</h2>
-      </Reveal>
+      <SectionHeading index="02" label="PROCESS" title="HOW I BUILD" />
 
       <div className="mt-16 max-w-3xl mx-auto lg:mx-0">
         {pipeline.map((stage, i) => {

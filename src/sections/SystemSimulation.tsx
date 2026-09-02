@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Reveal from '../components/Reveal'
 import Magnetic from '../components/Magnetic'
+import SectionHeading from '../components/SectionHeading'
 
 const requestChain = ['USER', 'REACT', 'HTTP REQUEST', 'LARAVEL ROUTE', 'CONTROLLER', 'MODEL', 'MYSQL']
 const responseChain = ['MYSQL', 'MODEL', 'CONTROLLER', 'JSON RESPONSE', 'REACT', 'USER']
@@ -39,16 +40,12 @@ export default function SystemSimulation() {
 
   return (
     <section id="simulation" className="relative container-px py-32">
-      <Reveal>
-        <span className="font-mono text-xs tracking-widest" style={{ color: 'var(--accent)' }}>
-          03 / LIVE SIMULATION
-        </span>
-        <h2 className="mt-4 font-display font-medium text-[clamp(1.8rem,4vw,3rem)]">HOW A REQUEST TRAVELS</h2>
-        <p className="mt-3 max-w-lg text-sm" style={{ color: 'var(--text-secondary)' }}>
-          A visual walkthrough of a typical request in a React + Laravel application. This is a simulation only — no
-          real network calls are made.
-        </p>
-      </Reveal>
+      <SectionHeading
+        index="03"
+        label="LIVE SIMULATION"
+        title="HOW A REQUEST TRAVELS"
+        description="A visual walkthrough of a typical request in a React + Laravel application. This is a simulation only — no real network calls are made."
+      />
 
       <Reveal delay={0.15}>
         <div

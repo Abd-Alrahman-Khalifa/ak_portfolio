@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { dbTables } from '../data/stack'
 import Reveal from '../components/Reveal'
+import SectionHeading from '../components/SectionHeading'
 
 export default function DatabaseExplorer() {
   const [hovered, setHovered] = useState<string | null>(null)
@@ -9,15 +10,12 @@ export default function DatabaseExplorer() {
 
   return (
     <section id="database" className="relative container-px py-32">
-      <Reveal>
-        <span className="font-mono text-xs tracking-widest" style={{ color: 'var(--accent)' }}>
-          04 / SCHEMA
-        </span>
-        <h2 className="mt-4 font-display font-medium text-[clamp(1.8rem,4vw,3rem)]">DATABASE EXPLORER</h2>
-        <p className="mt-3 max-w-lg text-sm" style={{ color: 'var(--text-secondary)' }}>
-          A simplified relational schema from the e-commerce platform. Hover a table to see its relationships.
-        </p>
-      </Reveal>
+      <SectionHeading
+        index="04"
+        label="SCHEMA"
+        title="DATABASE EXPLORER"
+        description="A simplified relational schema from the e-commerce platform. Hover a table to see its relationships."
+      />
 
       <Reveal delay={0.15}>
         <div className="mt-12 flex flex-wrap gap-4 justify-center">

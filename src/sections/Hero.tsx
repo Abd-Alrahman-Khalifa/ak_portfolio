@@ -1,11 +1,15 @@
+import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowDown, Download } from 'lucide-react'
 import { profile } from '../data/profile'
 import { scrollToSection } from '../data/nav'
 import Magnetic from '../components/Magnetic'
 import ArchitectureFlow from '../components/ArchitectureFlow'
+import { useParallax } from '../hooks/useParallax'
 
 export default function Hero() {
+  const flowRef = useRef<HTMLDivElement>(null)
+  useParallax(flowRef, 60)
   return (
     <section id="hero" className="relative min-h-screen flex flex-col justify-center container-px pt-32 pb-16">
       <div className="grid lg:grid-cols-[1.4fr_1fr] gap-16 items-center">
@@ -97,6 +101,7 @@ export default function Hero() {
         </div>
 
         <motion.div
+          ref={flowRef}
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}

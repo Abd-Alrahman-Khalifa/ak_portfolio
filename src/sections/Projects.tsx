@@ -49,8 +49,7 @@ export default function Projects() {
             <motion.button
               onClick={() => setOpenId(project.id)}
               layout
-              className="w-full text-left grid md:grid-cols-[auto_1fr_auto] items-center gap-6 md:gap-10 rounded-2xl border p-5 md:p-7 group"
-              style={{ borderColor: 'var(--border)', background: 'var(--surface)' }}
+              className="w-full text-left grid md:grid-cols-[auto_1fr_auto] items-center gap-6 md:gap-10 rounded-2xl p-5 md:p-7 group card-surface"
               data-cursor="VIEW"
             >
               <div className="w-full md:w-64 aspect-video rounded-xl overflow-hidden">

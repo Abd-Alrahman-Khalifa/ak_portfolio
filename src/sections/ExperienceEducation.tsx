@@ -1,16 +1,12 @@
 import { experience, education } from '../data/experience'
 import { profile } from '../data/profile'
 import Reveal from '../components/Reveal'
+import SectionHeading from '../components/SectionHeading'
 
 export default function ExperienceEducation() {
   return (
     <section id="experience" className="relative container-px py-32">
-      <Reveal>
-        <span className="font-mono text-xs tracking-widest" style={{ color: 'var(--accent)' }}>
-          10 / EXPERIENCE & EDUCATION
-        </span>
-        <h2 className="mt-4 font-display font-medium text-[clamp(1.8rem,4vw,3rem)]">TIMELINE</h2>
-      </Reveal>
+      <SectionHeading index="10" label="EXPERIENCE & EDUCATION" title="TIMELINE" />
 
       <div className="mt-16 grid lg:grid-cols-[2fr_1fr] gap-16">
         <div className="relative pl-8 border-l" style={{ borderColor: 'var(--border)' }}>
@@ -38,8 +34,7 @@ export default function ExperienceEducation() {
 
         <Reveal delay={0.15}>
           <div
-            className="rounded-2xl border p-7"
-            style={{ borderColor: 'var(--border)', background: 'var(--surface)' }}
+            className="rounded-2xl p-7 card-surface"
           >
             <span className="font-mono text-xs tracking-widest" style={{ color: 'var(--accent)' }}>
               EDUCATION

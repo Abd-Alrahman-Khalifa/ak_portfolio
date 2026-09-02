@@ -92,8 +92,7 @@ export default function GithubSection() {
               href={repo.html_url}
               target="_blank"
               rel="noreferrer"
-              className="block h-full rounded-2xl border p-6 transition-transform hover:-translate-y-1"
-              style={{ borderColor: 'var(--border)', background: 'var(--surface)' }}
+              className="block h-full rounded-2xl p-6 card-surface"
             >
               <h3 className="font-display text-lg" style={{ color: 'var(--text-primary)' }}>
                 {repo.name}

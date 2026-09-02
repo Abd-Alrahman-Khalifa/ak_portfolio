@@ -1,5 +1,6 @@
 import { projects } from '../data/projects'
 import Reveal from '../components/Reveal'
+import SectionHeading from '../components/SectionHeading'
 import GithubIcon from '../components/GithubIcon'
 
 const stages = [
@@ -30,14 +31,7 @@ export default function FeaturedCaseStudy() {
 
   return (
     <section id="case-study" className="relative container-px py-32">
-      <Reveal>
-        <span className="font-mono text-xs tracking-widest" style={{ color: 'var(--accent)' }}>
-          09 / FEATURED CASE STUDY
-        </span>
-        <h2 className="mt-4 font-display font-medium text-[clamp(1.8rem,4.5vw,3.4rem)] max-w-2xl">
-          {project.title}
-        </h2>
-      </Reveal>
+      <SectionHeading index="09" label="FEATURED CASE STUDY" title={project.title} />
 
       <div className="mt-16 grid md:grid-cols-2 gap-x-16 gap-y-10">
         {stages.map((stage, i) => (

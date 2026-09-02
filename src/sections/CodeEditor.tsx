@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Reveal from '../components/Reveal'
+import SectionHeading from '../components/SectionHeading'
 
 const tabs = [
   {
@@ -76,17 +77,12 @@ export default function CodeEditor() {
 
   return (
     <section id="code" className="relative container-px py-32">
-      <Reveal>
-        <span className="font-mono text-xs tracking-widest" style={{ color: 'var(--accent)' }}>
-          06 / CODE
-        </span>
-        <h2 className="mt-4 font-display font-medium text-[clamp(1.8rem,4vw,3rem)]">
-          CONCEPTS I WORK WITH
-        </h2>
-        <p className="mt-3 max-w-lg text-sm" style={{ color: 'var(--text-secondary)' }}>
-          Illustrative snippets representing patterns I actually use — not copied from a production system.
-        </p>
-      </Reveal>
+      <SectionHeading
+        index="06"
+        label="CODE"
+        title="CONCEPTS I WORK WITH"
+        description="Illustrative snippets representing patterns I actually use — not copied from a production system."
+      />
 
       <Reveal delay={0.15}>
         <div

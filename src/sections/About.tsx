@@ -44,8 +44,7 @@ export default function About() {
 
         <Reveal delay={0.15}>
           <div
-            className="rounded-2xl border p-6 space-y-5"
-            style={{ borderColor: 'var(--border)', background: 'var(--surface)' }}
+            className="rounded-2xl p-6 space-y-5 card-surface"
           >
             <InfoRow label="University" value={profile.university} />
             <InfoRow label="Track" value={profile.track} />

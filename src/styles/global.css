@@ -14,6 +14,8 @@
   --accent-2: #4dd6ff;
   --success: #4ade80;
   --danger: #ff5c5c;
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.35);
 
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -29,6 +31,8 @@
   --text-secondary: #45454f;
   --text-muted: #6b6b76;
   --accent-soft: rgba(124, 92, 255, 0.1);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -101,6 +105,26 @@ button {
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Accessible focus states — visible on keyboard nav, silent on mouse click */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Reusable elevated surface with hover lift, used by project/timeline/info cards */
+.card-surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card-surface:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
 }
 
 .noise-overlay {

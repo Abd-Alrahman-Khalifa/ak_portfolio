@@ -9,10 +9,3 @@ export const socials = [
 
 export const githubUsername = 'Abd-Alrahman-Khalifa'
 export const githubUrl = `https://github.com/${githubUsername}`
-
-// This portfolio's own repo/live links — update these once you've pushed
-// the project and know its final repo name / deployed URL (see README.md).
-export const portfolioMeta = {
-  repo: `https://github.com/${githubUsername}/ak-portfolio`,
-  live: `https://${githubUsername.toLowerCase()}.github.io/ak-portfolio/`,
-}

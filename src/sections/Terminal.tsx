@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { profile } from '../data/profile'
 import Reveal from '../components/Reveal'
+import SectionHeading from '../components/SectionHeading'
 
 const commandsMap: Record<string, string[]> = {
   whoami: ['abd-alrahman'],
@@ -90,12 +91,7 @@ export default function Terminal() {
 export function TerminalSection() {
   return (
     <section id="terminal" className="relative container-px py-32">
-      <Reveal>
-        <span className="font-mono text-xs tracking-widest" style={{ color: 'var(--accent)' }}>
-          05 / TERMINAL
-        </span>
-        <h2 className="mt-4 font-display font-medium text-[clamp(1.8rem,4vw,3rem)]">RUN A FEW COMMANDS</h2>
-      </Reveal>
+      <SectionHeading index="05" label="TERMINAL" title="RUN A FEW COMMANDS" />
       <Reveal delay={0.15} className="mt-10 max-w-2xl">
         <Terminal />
       </Reveal>
