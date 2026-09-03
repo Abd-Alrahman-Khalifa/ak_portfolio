@@ -89,8 +89,7 @@ export default function Hero() {
             <Magnetic>
               <a
                 href={profile.cvPath}
-                target="_blank"
-                rel="noreferrer"
+                download="AbdAlrahman-Khalifa-CV.pdf"
                 className="flex items-center gap-2 text-sm font-medium underline-offset-4 hover:underline"
                 style={{ color: 'var(--text-secondary)' }}
               >

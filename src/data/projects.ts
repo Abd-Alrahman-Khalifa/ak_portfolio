@@ -1,4 +1,4 @@
-export type ProjectCategory = 'Laravel' | 'PHP' | 'React' | 'Frontend'
+export type ProjectCategory = 'Backend' | 'Frontend' | 'Other'
 
 export interface Project {
   id: string
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     title: 'Laravel E-Commerce Platform',
     description:
       'A complete e-commerce store with an admin dashboard, product and category management, cart, wishlist, orders, and role-based authorization — built on Laravel with AJAX-driven interactions.',
-    categories: ['Laravel', 'PHP'],
+    categories: ['Backend'],
     technologies: ['Laravel', 'PHP', 'MySQL', 'Blade', 'JavaScript', 'jQuery', 'AJAX', 'Bootstrap'],
     features: [
       'Admin dashboard with product & category management',
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     number: '02',
     title: 'PHP Project',
     description: 'Core PHP application exploring MVC-style structuring, forms, and database interaction without a framework.',
-    categories: ['PHP'],
+    categories: ['Backend'],
     technologies: ['PHP', 'MySQL', 'JavaScript'],
     github: 'https://github.com/Abd-Alrahman-Khalifa/php_project',
     images: [],
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     number: '07',
     title: 'App PDF',
     description: 'A small utility application for working with PDF documents.',
-    categories: ['PHP'],
+    categories: ['Other'],
     technologies: ['PHP'],
     github: 'https://github.com/Abd-Alrahman-Khalifa/app-pdf',
     images: [],

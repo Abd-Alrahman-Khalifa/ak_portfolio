@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { navItems, scrollToSection } from '../data/nav'
-import { profile } from '../data/profile'
+import { downloadCV } from '../utils/downloadCV'
 import { useScrollLock } from '../hooks/useScrollLock'
 
 interface CommandPaletteProps {
@@ -37,7 +37,7 @@ export default function CommandPalette({ open, onClose }: CommandPaletteProps) {
       {
         id: 'cv',
         label: 'Download CV',
-        run: () => window.open(profile.cvPath, '_blank'),
+        run: () => downloadCV(),
       },
       {
         id: 'search-projects',

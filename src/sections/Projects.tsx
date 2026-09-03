@@ -5,7 +5,7 @@ import Reveal from '../components/Reveal'
 import ImageFallback from '../components/ImageFallback'
 import ProjectViewer from '../components/ProjectViewer'
 
-const filters: Array<ProjectCategory | 'All'> = ['All', 'Laravel', 'PHP', 'React', 'Frontend']
+const filters: Array<ProjectCategory | 'All'> = ['All', 'Backend', 'Frontend', 'Other']
 
 export default function Projects() {
   const [filter, setFilter] = useState<ProjectCategory | 'All'>('All')
