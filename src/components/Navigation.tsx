@@ -136,8 +136,8 @@ export default function Navigation({ theme, onToggleTheme, onOpenPalette }: Navi
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
                 onClick={() => {
-                  scrollToSection(item.id)
                   setMobileOpen(false)
+                  requestAnimationFrame(() => scrollToSection(item.id))
                 }}
                 className="font-display text-3xl"
                 style={{ color: 'var(--text-primary)' }}

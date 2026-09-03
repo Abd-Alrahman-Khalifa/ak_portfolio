@@ -89,8 +89,11 @@ export default function CommandPalette({ open, onClose }: CommandPaletteProps) {
                   <button
                     key={c.id}
                     onClick={() => {
-                      c.run()
                       onClose()
+                      // Defer until after the scroll-lock cleanup (lenis.start(),
+                      // body overflow restored) has actually run, or the scroll
+                      // silently no-ops while the modal is still closing.
+                      requestAnimationFrame(() => c.run())
                     }}
                     className="w-full text-left px-3 py-2.5 rounded-lg text-sm font-mono hover:bg-[var(--accent-soft)] transition-colors"
                     style={{ color: 'var(--text-primary)' }}

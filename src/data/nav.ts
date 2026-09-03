@@ -19,6 +19,10 @@ export function scrollToSection(id: string) {
   if (!el) return
   const lenis = (window as any).__lenis
   if (lenis?.scrollTo) {
+    // Guard against scrolling right after a modal (project viewer, command
+    // palette, mobile menu) called lenis.stop() — force it running again so
+    // the scroll actually takes effect instead of silently no-op'ing.
+    lenis.start()
     lenis.scrollTo(el, { offset: 0 })
   } else {
     el.scrollIntoView({ behavior: 'smooth', block: 'start' })
