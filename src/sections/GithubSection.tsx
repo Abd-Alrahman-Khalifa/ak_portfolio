@@ -19,18 +19,41 @@ export default function GithubSection() {
   const [failed, setFailed] = useState(false)
 
   useEffect(() => {
+    const selectedRepos = [
+      'laravel_project',
+      'php_project',
+      'my_portfolio',
+      'shopZ',
+      'Zshope' ,
+      'template-four' ,
+    ]
+  
     let cancelled = false
-    fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=6`)
-      .then((res) => {
-        if (!res.ok) throw new Error('GitHub API error')
+  
+    Promise.all(
+      selectedRepos.map(async (repoName) => {
+        const res = await fetch(
+          `https://api.github.com/repos/${githubUsername}/${repoName}`
+        )
+  
+        if (!res.ok) {
+          throw new Error(`Failed to load ${repoName}`)
+        }
+  
         return res.json()
       })
+    )
       .then((data) => {
-        if (!cancelled) setRepos(data)
+        if (!cancelled) {
+          setRepos(data)
+        }
       })
       .catch(() => {
-        if (!cancelled) setFailed(true)
+        if (!cancelled) {
+          setFailed(true)
+        }
       })
+  
     return () => {
       cancelled = true
     }

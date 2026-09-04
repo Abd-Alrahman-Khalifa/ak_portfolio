@@ -17,10 +17,10 @@ export const profile = {
   aboutHighlights: ['DATABASE', 'BACKEND', 'API', 'FRONTEND'],
   counters: [
     { label: 'Expected Graduation', value: '2027' },
-    { label: 'Practical Experience', value: '2 Months' },
+    { label: 'Practical Experience', value: '2 Years' },
     { label: 'Projects / Repositories Shown', value: '7+' },
   ],
-  cvPath: '/assets/cv.pdf',
-  profileImage: '/assets/profile.jpg',
+  cvPath: 'assets/AbdAlrahman-Khalifa-CV.pdf',
+  profileImage: 'assets/profile.jpg',
   whatsapp: 'https://wa.me/201140527582',
 }
